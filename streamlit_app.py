@@ -135,7 +135,7 @@ elif page == pages[1]:
 elif page == pages[2]:
     st.header("📊 Data Visualisation")
 
-print('Hello world')
+AAAAAAAAAAAAA
 
 # Page de Modélisation
 elif page == pages[3]:
