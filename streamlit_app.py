@@ -98,7 +98,7 @@ if page == pages[0]:
      # Ajouter l'image du bandeau
     st.image('https://raw.githubusercontent.com/ChristopheMontoriol/French_Industry_Janv24/main/data/Bandeau_FrenchIndustry.png', use_column_width=True)
     st.write("""
-        L’objectif premier de ce projet est d’observer et de comprendre quelles sont les inégalités salariales en France. 
+        AAAL’objectif premier de ce projet est d’observer et de comprendre quelles sont les inégalités salariales en France. 
         À travers plusieurs jeux de données et plusieurs variables (géographiques, socio-professionnelles, démographiques, mais aussi du nombre d’entreprises par zone), 
         il sera question dans ce projet de mettre en lumière les facteurs d’inégalités les plus déterminants et de recenser ainsi les variables qui ont un impact significatif sur les deltas de salaire.
         En plus de distinguer les variables les plus déterminantes sur les niveaux de revenus, l’objectif de cette étude sera de construire des clusters ou des groupes de pairs basés sur les niveaux de salaire similaires.
