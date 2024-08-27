@@ -296,14 +296,14 @@ elif page == pages[3]:
         st.write("")
         st.write("")
 
-        st.subheader("prediction vs vraies & QQ plot des résidus")
+        st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
         image_cumul_residus = "https://zupimages.net/up/24/35/t9c6.png"
         st.image(image_cumul_residus, use_column_width=True)
         
         st.markdown("""
                     ##### Conclusions :         
                     - Distributions relativement centrées autour de zéro
-                    - Distribution normales des résidus
+                    - Distribution normale des résidus
                     - Très peu de points au dela de +/-2
                     - Les résultats obtenus sont plutot uniformes pour toute la plage des données
                     """)
