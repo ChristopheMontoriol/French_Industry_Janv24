@@ -228,8 +228,29 @@ elif page == pages[2]:
 elif page == pages[3]:
     st.header("🧩 Modélisation")
     st.subheader("Objectif")
-    st.write("Prédire le salaire net moyen en fonction des features ")
+    st.write("Prédire le salaire net moyen en fonction des features.")
+    
+    if st.button("Modèles étudiés") :
+        st.subheader("Liste des modèles")
+        st.markdown("""
+                    Afin de déterminer le plus performant possible, nous avons étudié plusieurs modèles de machine learning :
+                    - Régression linéaire
+                    - Forêt aléatoire
+                    - Clustering
+        """)
 
+
+        st.subheader("Exécution des modèles")
+        st.markdown("""
+                    Pour chaque modèle appliqué, nous avons suivi les étapes suivantes :
+                    1. Instanciation du modèle.
+                    2. Entrainement du modèle sur l'ensemble du jeu d'entraînement X_train et y_train.
+                    3. Prédictions sur l'ensemble du jeu de test X_test et y_test.
+                    4. Evaluation de la performance des modèles en utilisant les métriques appropriées.
+                    5. Interprétation des coefficients pour comprendre l'impact de chaque caractéristique sur la variable cible.
+                    6. Visualisation et analyse des résultats.
+                """)
+        
 # Page de Prédiction
 elif page == pages[4]:
     st.header("🔮 Prédiction")
