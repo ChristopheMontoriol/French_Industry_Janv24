@@ -278,8 +278,7 @@ elif page == pages[3]:
         st.markdown("""
                         ##### Choix du modèle :
                         - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation. Ils sont donc disqualifiés.
-                        - Critères de choix du modèle pour le modèle Forêt aléatoire :
-                        
+                        - Critères de choix du modèle pour le modèle Forêt aléatoire :                    
                         Les R² ne montrent pas d'overfitting et sont proches de 0.9.
                         Les erreurs restent acceptables.
                         """)
