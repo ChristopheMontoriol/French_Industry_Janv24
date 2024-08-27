@@ -273,19 +273,23 @@ elif page == pages[3]:
 
 
         # Afficher le tableau avec le style appliqué
-        st.subheader("Métriques de Performance Optimisées")
+        st.subheader("Synthèse des résultats via les métriques de performance")
         st.table(styled_tab)
         st.markdown("""
-                        ##### Points à retenir :
-                        - Critères de choix : Valeurs R2 élevés, Valeurs autres métriques basses
-                        - GradientBoosting OVERFITTING donc Random Forest Regressor
-                        - Choix du modèle Random Forest Regressor.
+                        ##### Choix du modèle :
+                        - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation. Ils sont donc disqualifiés.
+                        - Critères de choix du modèle Forêt aléatoire :
+                        Les R² ne montrent pas d'overfitting et sont proches de 0.9.
+                        Les erreurs restent acceptables.
+                        - Choix du modèle : Forêt aléatoire avec discrétisation.
                         """)
-        
         st.write("")
-        st.write("#### Modèle retenue : Random Forest Regressor.")
+        st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
 
-            
+
+
+
+
 # Page de Prédiction
 elif page == pages[4]:
     st.header("🔮 Prédiction")
