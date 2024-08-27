@@ -307,8 +307,8 @@ elif page == pages[3]:
 
     if st.button("Features d'importance") :
 
-     st.subheader("Histogramme des Features d'importance")
-        image_qqplot = "https://zupimages.net/up/24/35/asi7.png"
+    st.subheader("Histogramme des Features d'importance")
+    image_qqplot = "https://zupimages.net/up/24/35/asi7.png"
    
 
 
