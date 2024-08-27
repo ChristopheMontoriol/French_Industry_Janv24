@@ -273,7 +273,7 @@ elif page == pages[3]:
 
 
         # Afficher le tableau avec le style appliqué
-        st.subheader("Synthèse des résultats via les métriques de performance")
+        st.subheader("Synthèse des métriques de performance")
         st.table(styled_tab)
         st.markdown("""
                         ##### Choix du modèle :
@@ -287,6 +287,31 @@ elif page == pages[3]:
         st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
 
 
+    if st.button("Evaluation graphique du modèle") :
+ 
+        #QQplot, residu et prediction vs vraies
+        st.subheader("Dispersion des résidus")
+        image_qqplot = "https://zupimages.net/up/24/35/p6pk.jpg"
+        st.image(image_qqplot, use_column_width=True)
+
+        st.write("")
+        st.write("")
+
+        st.subheader("Distribution cumulative des résidus")
+        image_cumul_residus = "https://zupimages.net/up/24/04/l83v.png"
+        st.image(image_cumul_residus, use_column_width=True)
+        
+        st.markdown("""
+                    ##### Points à retenir :         
+                    - Distributions relativement centrées autour de zéro
+                    - Distribution normales des résidus
+                    - Très peu de points au dela de +/-1
+                    - Variabilité moyenne des résidus pas trop importantes : 18.21%
+                    - Discussion ouverte sur l'erreur acceptable par l'organisation.
+                    """)
+        
+        st.write("")
+        st.write("")
 
 
 
