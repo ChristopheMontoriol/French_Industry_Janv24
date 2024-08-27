@@ -283,7 +283,7 @@ elif page == pages[3]:
                         Les R² ne montrent pas d'overfitting et sont proches de 0.9.                                
                         Les erreurs restent acceptables.
                         """)
-        st.write("")
+
         st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
 
 
@@ -291,14 +291,10 @@ elif page == pages[3]:
  
         st.subheader("Dispersion des résidus & distributions des résidus")
         image_qqplot = "https://zupimages.net/up/24/35/r6ed.png"
-        st.image(image_qqplot, use_column_width=True)
-
-        st.write("")
-        st.write("")
 
         st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
         image_cumul_residus = "https://zupimages.net/up/24/35/t9c6.png"
-        st.image(image_cumul_residus, use_column_width=True)
+
         
         st.markdown("""
                     ##### Conclusions :         
@@ -308,9 +304,12 @@ elif page == pages[3]:
                     - Les résultats obtenus sont plutot uniformes pour toute la plage des données
                     """)
         
-        st.write("")
-        st.write("")
 
+    if st.button("Features d'importance") :
+
+     st.subheader("Histogramme des Features d'importance")
+        image_qqplot = "https://zupimages.net/up/24/35/asi7.png"
+   
 
 
 # Page de Prédiction
