@@ -259,7 +259,9 @@ elif page == pages[3]:
         'MSE test': [0.0117, 0.5903,0.3755,0.4577,0.0022,0.0344],
         'MAE test': [0.0747,0.5250,0.4523,0.5240,0.0377,0.1319],
         'RMSE test': [0.1084,,0.7683, 0.6127,0.6765,0.0474,0.1855]
+        }
 
+        
         # Création du DataFrame
         tab = pd.DataFrame(data)
         tab.index = tab.index #+ 1
