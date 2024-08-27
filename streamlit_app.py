@@ -291,7 +291,7 @@ elif page == pages[3]:
  
         #QQplot, residu et prediction vs vraies
         st.subheader("Dispersion des résidus")
-        image_qqplot = "https://zupimages.net/up/24/35/42u4.png"
+        image_qqplot = "https://zupimages.net/viewer.php?id=24/35/42u4.png"
         st.image(image_qqplot, use_column_width=True)
 
         st.write("")
