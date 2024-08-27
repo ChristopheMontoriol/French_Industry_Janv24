@@ -289,25 +289,23 @@ elif page == pages[3]:
 
     if st.button("Evaluation graphique du modèle") :
  
-        #QQplot, residu et prediction vs vraies
-        st.subheader("Dispersion des résidus")
+        st.subheader("Dispersion des résidus & distributions des résidus")
         image_qqplot = "https://zupimages.net/up/24/35/r6ed.png"
         st.image(image_qqplot, use_column_width=True)
 
         st.write("")
         st.write("")
 
-        st.subheader("Distribution cumulative des résidus")
-        image_cumul_residus = "https://zupimages.net/up/24/04/l83v.png"
+        st.subheader("prediction vs vraies & QQ plot des résidus")
+        image_cumul_residus = "https://zupimages.net/up/24/35/t9c6.png"
         st.image(image_cumul_residus, use_column_width=True)
         
         st.markdown("""
-                    ##### Points à retenir :         
+                    ##### Conclusions :         
                     - Distributions relativement centrées autour de zéro
                     - Distribution normales des résidus
-                    - Très peu de points au dela de +/-1
-                    - Variabilité moyenne des résidus pas trop importantes : 18.21%
-                    - Discussion ouverte sur l'erreur acceptable par l'organisation.
+                    - Très peu de points au dela de +/-2
+                    - Les résultats obtenus sont plutot uniformes pour toute la plage des données
                     """)
         
         st.write("")
