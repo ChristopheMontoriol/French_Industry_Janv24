@@ -290,10 +290,12 @@ elif page == pages[3]:
     if st.button("Evaluation graphique du modèle") :
  
         st.subheader("Dispersion des résidus & distributions des résidus")
-        image_qqplot = "https://zupimages.net/up/24/35/r6ed.png"
-
+        image_distrib = "https://zupimages.net/up/24/35/r6ed.png"
+        st.image(image_distrib, use_column_width=True)
+        
         st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
-        image_cumul_residus = "https://zupimages.net/up/24/35/t9c6.png"
+        image_comparaison = "https://zupimages.net/up/24/35/t9c6.png"
+        st.image(image_comparaison, use_column_width=True)
 
         
         st.markdown("""
@@ -308,8 +310,8 @@ elif page == pages[3]:
     if st.button("Features d'importance") :
 
         st.subheader("Histogramme des Features d'importance")
-        image_qqplot = "https://zupimages.net/up/24/35/asi7.png"
-   
+        image_features_importances = "https://zupimages.net/up/24/35/asi7.png"
+        st.image(image_features_importances, use_column_width=True)
 
 
 # Page de Prédiction
