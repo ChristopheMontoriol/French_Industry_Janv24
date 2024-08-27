@@ -233,7 +233,7 @@ elif page == pages[3]:
     if st.button("Modèles étudiés") :
         st.subheader("Liste des modèles")
         st.markdown("""
-                    Afin de déterminer le plus performant possible, nous avons étudié plusieurs modèles de machine learning :
+                    Afin de déterminer le plus performant possible, nous avons étudié plusieurs modèles de machine learning:
                     - Régression linéaire
                     - Forêt aléatoire
                     - Clustering
@@ -248,9 +248,44 @@ elif page == pages[3]:
                     3. Prédictions sur l'ensemble du jeu de test X_test et y_test.
                     4. Evaluation de la performance des modèles en utilisant les métriques appropriées.
                     5. Interprétation des coefficients pour comprendre l'impact de chaque caractéristique sur la variable cible.
-                    6. Visualisation et analyse des résultats.
+                    6. Optimisation du modèle : variation des paramètres, sélection des features utilisées, discrétisation des valeurs.
+                    7. Visualisation et analyse des résultats.
                 """)
+    if st.button("Modèle retenu") :
+        data = {
+        'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
+        'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
+        'R² test': [0.9977,0.8892,0.9376,0.9140,0.9996,0.9938],
+        'MSE test': [0.0117, 0.5903,0.3755,0.4577,0.0022,0.0344],
+        'MAE test': [0.0747,0.5250,0.4523,0.5240,0.0377,0.1319],
+        'RMSE test': [0.1084,,0.7683, 0.6127,0.6765,0.0474,0.1855]
+
+        # Création du DataFrame
+        tab = pd.DataFrame(data)
+        tab.index = tab.index #+ 1
+        # Trouver l'index de la ligne correspondant à "Random Forest"
+        rf_index = tab[tab['Modèles'] == 'Random Forest'].index
+
+        # Appliquer un style personnalisé à la ligne spécifique
+        styled_tab = tab.style.apply(lambda x: ['background: #27dce0' if x.name in rf_index else '' for i in x], axis=1)
         
+        st.write("")
+        st.write("")
+
+        # Afficher le tableau avec le style appliqué
+        st.subheader("Métriques de Performance Optimisées")
+        st.table(styled_tab)
+        st.markdown("""
+                        ##### Points à retenir :
+                        - Critères de choix : Valeurs R2 élevés, Valeurs autres métriques basses
+                        - GradientBoosting OVERFITTING donc Random Forest Regressor
+                        - Choix du modèle Random Forest Regressor.
+                        """)
+        
+        st.write("")
+        st.write("#### Modèle retenue : Random Forest Regressor.")
+
+            
 # Page de Prédiction
 elif page == pages[4]:
     st.header("🔮 Prédiction")
