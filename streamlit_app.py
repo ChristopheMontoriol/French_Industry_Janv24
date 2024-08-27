@@ -265,14 +265,12 @@ elif page == pages[3]:
         # Création du DataFrame
         tab = pd.DataFrame(data)
         tab.index = tab.index #+ 1
-        # Trouver l'index de la ligne correspondant à "Random Forest"
-        rf_index = tab[tab['Modèles'] == 'Random Forest'].index
+        # Trouver l'index de la ligne correspondant à "Forêt aléatoire avec discrétisation"
+        rf_index = tab[tab['Modèles'] == 'Forêt aléatoire avec discrétisation'].index
 
         # Appliquer un style personnalisé à la ligne spécifique
         styled_tab = tab.style.apply(lambda x: ['background: #27dce0' if x.name in rf_index else '' for i in x], axis=1)
-        
-        st.write("")
-        st.write("")
+
 
         # Afficher le tableau avec le style appliqué
         st.subheader("Métriques de Performance Optimisées")
