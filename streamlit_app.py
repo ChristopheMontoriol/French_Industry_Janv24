@@ -109,31 +109,6 @@ if page == pages[0]:
         Enfin, un modèle de Machine Learning sera créé pour prédire au mieux un salaire en fonction des variables disponibles dans les jeux de données.
     """)
 
-# # Page d'exploration des données
-# elif page == pages[1]:
-#     st.header("🔍 Exploration des Données")
-
-#     # Fonction pour afficher les informations des DataFrames
-#     def afficher_info(dataframe, name):
-#         st.write(f"### {name}")
-#         st.write("#### Aperçu")
-#         st.write(dataframe.head())
-        
-#         st.write("#### Informations")
-#         buffer = io.StringIO()
-#         dataframe.info(buf=buffer)
-#         st.text(buffer.getvalue())
-        
-#         st.write("#### Statistiques")
-#         st.write(dataframe.describe())
-
-#     # Affichage des informations en fonction de la page sélectionnée
-#     if st.session_state.page == "Etablissement":
-#         afficher_info(etablissement, "Etablissement")
-#     elif st.session_state.page == "Geographic":
-#         afficher_info(geographic, "Geographic")
-#     elif st.session_state.page == "Salaire":
-#         afficher_info(salaire, "Salaire")
 
 # Page d'exploration des données
 elif page == pages[1]:
@@ -173,7 +148,11 @@ elif page == pages[1]:
         afficher_info(geographic, "Geographic")
     elif st.session_state.page == "Salaire":
         afficher_info(salaire, "Salaire")
-
+    elif st.session_state.page == "Population":
+        # Afficher un message pour la page Population
+        st.write("Pas d'import du dataframe Population, ce jeu de données n'est pas utilisé dans notre projet.")
+        # Ajouter un lien vers l'image population.jpg
+        # st.write("![Population Image](population.jpg)")
 
 
 # Page de Data Visualisation
