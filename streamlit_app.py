@@ -109,6 +109,32 @@ if page == pages[0]:
         Enfin, un modèle de Machine Learning sera créé pour prédire au mieux un salaire en fonction des variables disponibles dans les jeux de données.
     """)
 
+# # Page d'exploration des données
+# elif page == pages[1]:
+#     st.header("🔍 Exploration des Données")
+
+#     # Fonction pour afficher les informations des DataFrames
+#     def afficher_info(dataframe, name):
+#         st.write(f"### {name}")
+#         st.write("#### Aperçu")
+#         st.write(dataframe.head())
+        
+#         st.write("#### Informations")
+#         buffer = io.StringIO()
+#         dataframe.info(buf=buffer)
+#         st.text(buffer.getvalue())
+        
+#         st.write("#### Statistiques")
+#         st.write(dataframe.describe())
+
+#     # Affichage des informations en fonction de la page sélectionnée
+#     if st.session_state.page == "Etablissement":
+#         afficher_info(etablissement, "Etablissement")
+#     elif st.session_state.page == "Geographic":
+#         afficher_info(geographic, "Geographic")
+#     elif st.session_state.page == "Salaire":
+#         afficher_info(salaire, "Salaire")
+
 # Page d'exploration des données
 elif page == pages[1]:
     st.header("🔍 Exploration des Données")
@@ -116,15 +142,28 @@ elif page == pages[1]:
     # Fonction pour afficher les informations des DataFrames
     def afficher_info(dataframe, name):
         st.write(f"### {name}")
-        st.write("#### Aperçu")
+        
+        # Calcul des informations demandées
+        nb_lignes = dataframe.shape[0]
+        nb_colonnes = dataframe.shape[1]
+        nb_doublons = dataframe.duplicated().sum()
+        nb_donnees_manquantes = dataframe.isna().sum().sum()
+        
+        # Affichage des informations calculées
+        st.write(f"**Nombre de lignes :** {nb_lignes}")
+        st.write(f"**Nombre de colonnes :** {nb_colonnes}")
+        st.write(f"**Nombre de doublons :** {nb_doublons}")
+        st.write(f"**Nombre de données manquantes :** {nb_donnees_manquantes}")
+        
+        st.write("#### Aperçu des premières lignes de ce jeu de données")
         st.write(dataframe.head())
         
-        st.write("#### Informations")
+        st.write("#### Informations principales de ce jeu de données")
         buffer = io.StringIO()
         dataframe.info(buf=buffer)
         st.text(buffer.getvalue())
         
-        st.write("#### Statistiques")
+        st.write("#### Résumé Statistique du jeu de données")
         st.write(dataframe.describe())
 
     # Affichage des informations en fonction de la page sélectionnée
@@ -134,6 +173,8 @@ elif page == pages[1]:
         afficher_info(geographic, "Geographic")
     elif st.session_state.page == "Salaire":
         afficher_info(salaire, "Salaire")
+
+
 
 # Page de Data Visualisation
 elif page == pages[2]:
