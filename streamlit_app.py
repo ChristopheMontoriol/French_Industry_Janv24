@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import io
 import warnings
+import pickle
+import json
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
@@ -341,7 +343,9 @@ elif page == pages[4]:
 # Page de Prédiction
 elif page == pages[5]:
     st.header("🔮 Prédiction")
-    st.subheader('Simulation de Prédiction avec Random Forest Regressor')
+    st.subheader('Simulation de Prédiction avec le modèle : Forêt aléatoire avec discrétisation')
+
+
 
 # Page de Conclusion
 elif page == pages[6]:
