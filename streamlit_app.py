@@ -350,7 +350,7 @@ elif page == pages[5]:
     st.subheader('Prédiction du salaire net moyen')
 
     
-    def charger_modele():
+    def charger_modele(): 
         # Charger le modèle à partir du fichier Pickle
         with open('modele.pkl', 'rb') as fichier_modele:
             modele = pickle.load(fichier_modele)
