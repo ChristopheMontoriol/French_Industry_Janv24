@@ -345,7 +345,84 @@ elif page == pages[5]:
     st.header("🔮 Prédiction")
     st.subheader('Simulation de Prédiction avec le modèle : Forêt aléatoire avec discrétisation')
 
-
+    
+    def charger_modele():
+        # Charger le modèle à partir du fichier Pickle
+        with open('modele.pkl', 'rb') as fichier_modele:
+            modele = pickle.load(fichier_modele)
+        return modele
+    
+    def charger_min_max():
+        # Charger les valeurs min et max des caractéristiques depuis le fichier JSON
+        with open('feature_min_max.json', 'r') as json_file:
+            min_max_dict = json.load(json_file)
+        return min_max_dict
+    
+    def charger_target_mapping():
+        # Charger le mapping des targets depuis le fichier JSON
+        with open('target_encoding.json', 'r') as json_file:
+            target_mapping = json.load(json_file)
+        # Convertir les clés en entiers
+        target_mapping = {int(key): value for key, value in target_mapping.items()}
+        return target_mapping
+    
+    # Charger les valeurs min et max
+    min_max_dict = charger_min_max()
+    
+    # Interface utilisateur Streamlit
+    st.title("Prédiction du salaire moyen")
+    
+    # Créer des curseurs pour chaque caractéristique en utilisant les noms et valeurs depuis le JSON
+    caracteristiques_entree = []
+    for feature, limits in min_max_dict.items():
+        caracteristique = st.slider(
+            f"{feature}", 
+            float(limits['min']), 
+            float(limits['max']), 
+            float((limits['min'] + limits['max']) / 2),
+            step = 1.0,
+        )
+        caracteristiques_entree.append(caracteristique)
+    
+    # Charger le modèle et le mapping de la cible
+    modele = charger_modele()
+    target_mapping = charger_target_mapping()
+    
+    # Préparer les caractéristiques pour la prédiction
+    caracteristiques = np.array([caracteristiques_entree])
+    
+    # Prévoir la classe avec le modèle
+    prediction_encoded = modele.predict(caracteristiques)
+    
+    # Décoder la prédiction
+    #prediction_decoded = target_mapping[prediction_encoded[0]]
+    
+    # Afficher la prédiction
+    st.markdown(
+        f"<p style='font-size:24px; font-weight:bold;'>La prédiction du salaire moyen est : {prediction_encoded}</p>", 
+        unsafe_allow_html=True
+    )
+    
+    data_pred = {
+            'Variables': ['salaire_cadre_discretise','salaire_cadre_moyen_discretise','salaire_employe_discretise',	'salaire_travailleur_discretise',
+                    'salaire_cadre_femme_discretise','salaire_cadre_moyen_femme_discretise','salaire_employe_femme_discretise', 'salaire_travailleur_femme_discretise',
+                    'salaire_homme_discretise', 'salaire_cadre_homme_discretise', 'salaire_cadre_moyen_homme_discretise', 'salaire_employe_homme_discretise', 
+                    'salaire_travailleur_homme_discretise',	'salaire_18-25_discretise','salaire_+50_discretise','salaire_18-25_femme_discretise','salaire_+50_femme_discretise',
+                    'salaire_18-25_homme_discretise','salaire_+50_homme_discretise','salaire'],
+            'Prédiction N°1': [1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,2,0,0,0,13.7],
+            'Prédiction N°2': [1,0,1,0,2,1,1,1,1,2,0,1,0,0,1,2,1,0,1,18.0]
+        }
+    
+    st.write("")
+    
+    if st.checkbox("Cas concret de prédiction"):
+            #st.write("##### Cas concret de prédiction :")
+            tab = pd.DataFrame.from_dict(data_pred, orient='index')
+            # Définir les colonnes en utilisant la première ligne du DataFrame
+            tab.columns = tab.iloc[0]
+            # Exclure la première ligne du DataFrame
+            tab = tab[1:]    
+            st.table(tab)
 
 # Page de Conclusion
 elif page == pages[6]:
