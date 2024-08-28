@@ -7,7 +7,7 @@ import io
 import warnings
 import pickle
 import json
-import scikit
+import sklearn
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
