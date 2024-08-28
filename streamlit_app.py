@@ -67,7 +67,7 @@ if page == pages[1]:
         st.session_state.page = "Etablissement"
 
     # Sélection de la page de données
-    data_pages = ["Etablissement", "Geographic", "Salaire"]
+    data_pages = ["Etablissement", "Geographic", "Salaire", "Population"]
     # st.sidebar.markdown("### Choix des données")
     st.session_state.page = st.sidebar.selectbox("Sélection du Dataframe", data_pages, index=data_pages.index(st.session_state.page))
 
