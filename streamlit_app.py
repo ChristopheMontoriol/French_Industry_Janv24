@@ -343,7 +343,7 @@ elif page == pages[4]:
 # Page de Prédiction
 elif page == pages[5]:
     st.header("🔮 Prédiction")
-    st.subheader('Simulation de Prédiction avec le modèle : Forêt aléatoire avec discrétisation')
+    st.subheader('Prédiction du salaire moyen')
 
     
     def charger_modele():
@@ -368,9 +368,7 @@ elif page == pages[5]:
     
     # Charger les valeurs min et max
     min_max_dict = charger_min_max()
-    
-    # Interface utilisateur Streamlit
-    st.title("Prédiction du salaire moyen")
+
     
     # Créer des curseurs pour chaque caractéristique en utilisant les noms et valeurs depuis le JSON
     caracteristiques_entree = []
@@ -404,13 +402,9 @@ elif page == pages[5]:
     )
     
     data_pred = {
-            'Variables': ['salaire_cadre_discretise','salaire_cadre_moyen_discretise','salaire_employe_discretise',	'salaire_travailleur_discretise',
-                    'salaire_cadre_femme_discretise','salaire_cadre_moyen_femme_discretise','salaire_employe_femme_discretise', 'salaire_travailleur_femme_discretise',
-                    'salaire_homme_discretise', 'salaire_cadre_homme_discretise', 'salaire_cadre_moyen_homme_discretise', 'salaire_employe_homme_discretise', 
-                    'salaire_travailleur_homme_discretise',	'salaire_18-25_discretise','salaire_+50_discretise','salaire_18-25_femme_discretise','salaire_+50_femme_discretise',
-                    'salaire_18-25_homme_discretise','salaire_+50_homme_discretise','salaire'],
-            'Prédiction N°1': [1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,2,0,0,0,13.7],
-            'Prédiction N°2': [1,0,1,0,2,1,1,1,1,2,0,1,0,0,1,2,1,0,1,18.0]
+            'Variables': ['salaire_cadre_discretise','salaire_employe_discretise','salaire_homme_discretise','salaire_+50_discretise','salaire_+50_femme_discretise','salaire'],
+            'Prédiction N°1': [1,0,0,0,0,13.7],
+            'Prédiction N°2': [1,1,1,1,1,18.0]
         }
     
     st.write("")
