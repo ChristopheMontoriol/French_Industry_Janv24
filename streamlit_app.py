@@ -152,7 +152,7 @@ elif page == pages[1]:
         # Afficher un message pour la page Population
         st.write("Pas d'import du dataframe Population, ce jeu de données n'est pas utilisé dans notre projet.")
         # Ajouter un lien vers l'image population.jpg
-        # st.write("![Population Image](population.jpg)")
+        st.image('https://raw.githubusercontent.com/ChristopheMontoriol/French_Industry_Janv24/main/data/population.jpg', use_column_width=True)
 
 
 # Page de Data Visualisation
