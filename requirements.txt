@@ -5,5 +5,5 @@ numpy
 pandas
 plotly
 statsmodels
-scikit-learn==1.3.0
+scikit-learn==1.2.2
 
