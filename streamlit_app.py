@@ -401,7 +401,7 @@ elif page == pages[5]:
     
     # Afficher la prédiction
     st.markdown(
-        ">La prédiction du salaire moyen est : {prediction_encoded}</p>", 
+        f"<p style='font-size:24px; font-weight:bold;'>La prédiction du salaire moyen est : {prediction_encoded}</p>", 
         unsafe_allow_html=True
     )
     
