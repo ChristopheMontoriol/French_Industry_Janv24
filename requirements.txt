@@ -1,10 +1,10 @@
 matplotlib
 statsmodels
 streamlit==1.37.0
-pandas==2.0.3
-numpy==1.24.3
-scipy==1.11.1
-plotly==5.9.0
-seaborn==0.12.2
+pandas
+numpy
+scipy
+plotly
+seaborn
 scikit-learn==1.2.2
 
