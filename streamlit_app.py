@@ -58,6 +58,7 @@ salaire['CODGEO'] = salaire['CODGEO'].str.lstrip('0').str.replace('A', '0').str.
 # Configuration de la barre latérale
 st.sidebar.title("Sommaire")
 pages = ["👋 Intro", "🔍 Exploration des données", "📊 Data Visualisation", "🧩 Modélisation", "🔮 Prédiction", "📌 Conclusion"]
+pages = ["👋 Intro", "🔍 Exploration des données", "Statistiques","📊 Data Visualisation", "🧩 Modélisation", "🔮 Prédiction", "📌 Conclusion"]
 page = st.sidebar.radio("Aller vers", pages)
 
 # Affichage de la sélection des données uniquement pour la page "Exploration des données"
@@ -154,9 +155,13 @@ elif page == pages[1]:
         # Ajouter un lien vers l'image population.jpg
         st.image('https://raw.githubusercontent.com/ChristopheMontoriol/French_Industry_Janv24/main/data/Population.jpg', use_column_width=True)
 
+# Page de Statistiques
+elif page == pages[2]:
+    st.header("📊 Statistiques")
+
 
 # Page de Data Visualisation
-elif page == pages[2]:
+elif page == pages[3]:
     st.header("📊 Data Visualisation")
 
     st.subheader("Disparité salariale homme/femme")
@@ -245,7 +250,7 @@ elif page == pages[2]:
 
 
 # Page de Modélisation
-elif page == pages[3]:
+elif page == pages[4]:
     st.header("🧩 Modélisation")
     st.subheader("Objectif")
     st.write("Prédire le salaire net moyen en fonction des features.")
@@ -335,12 +340,12 @@ elif page == pages[3]:
 
 
 # Page de Prédiction
-elif page == pages[4]:
+elif page == pages[5]:
     st.header("🔮 Prédiction")
     st.subheader('Simulation de Prédiction avec Random Forest Regressor')
 
 # Page de Conclusion
-elif page == pages[5]:
+elif page == pages[6]:
     st.header("📌 Conclusion")
     st.write("**Conclusion**")
 
