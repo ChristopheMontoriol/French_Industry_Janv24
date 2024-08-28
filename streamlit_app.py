@@ -108,7 +108,9 @@ if page == pages[0]:
         À travers plusieurs jeux de données et plusieurs variables (géographiques, socio-professionnelles, démographiques ...).       
         
         Il sera question dans ce projet de mettre en lumière les facteurs d’inégalités les plus déterminants et de recenser ainsi les variables qui ont un impact significatif sur les écarts de salaire.
+        
         En plus de distinguer les variables les plus déterminantes sur les niveaux de revenus, l’objectif de cette étude sera de construire des clusters ou des groupes de pairs basés sur les niveaux de salaire similaires.
+        
         Enfin, un modèle de Machine Learning sera entrainé pour prédire au mieux le salaire net moyen en fonction des variables disponibles dans les jeux de données.
     """)
 
