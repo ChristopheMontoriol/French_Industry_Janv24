@@ -57,8 +57,7 @@ salaire['CODGEO'] = salaire['CODGEO'].str.lstrip('0').str.replace('A', '0').str.
 
 # Configuration de la barre latérale
 st.sidebar.title("Sommaire")
-pages = ["👋 Intro", "🔍 Exploration des données", "📊 Data Visualisation", "🧩 Modélisation", "🔮 Prédiction", "📌 Conclusion"]
-pages = ["👋 Intro", "🔍 Exploration des données", "Statistiques","📊 Data Visualisation", "🧩 Modélisation", "🔮 Prédiction", "📌 Conclusion"]
+pages = ["👋 Intro", "🔍 Exploration des données", "📌Statistiques","📊 Data Visualisation", "🧩 Modélisation", "🔮 Prédiction", "📌 Conclusion"]
 page = st.sidebar.radio("Aller vers", pages)
 
 # Affichage de la sélection des données uniquement pour la page "Exploration des données"
