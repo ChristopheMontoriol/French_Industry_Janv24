@@ -182,10 +182,10 @@ elif page == pages[2]:
     #     st.write("Les données ne suivent probablement pas une distribution normale.")
     #     st.write(f"Les données ne suivent probablement pas une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
 # Matrice de corrélation des variables du dataframe salaire
-    # st.write("### Matrice de corrélation des variables du dataframe salaire")
+    st.write("### Matrice de corrélation des variables du dataframe salaire")
     
-    # # Exclure les colonnes non numériques
-    # salaire_corr = salaire.drop(columns=['CODGEO'])  # il n'y a pas de colonne 'LIBGEO'
+    # Exclure les colonnes non numériques
+    salaire_corr = salaire.drop(columns=['CODGEO'])  # il n'y a pas de colonne 'LIBGEO'
     
     # # Créer la matrice de corrélation avec Plotly
     # matrix_corr = px.imshow(salaire_corr.corr().round(2), text_auto=True)
