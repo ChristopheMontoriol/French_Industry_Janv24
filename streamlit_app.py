@@ -6,6 +6,13 @@ import seaborn as sns
 import io
 import warnings
 import plotly.express as px
+# Rajout le 29/08/24 pour la partie Statistiques
+import pylab
+import scipy.stats as stats
+from scipy.stats import shapiro
+from ipywidgets import interact, IntSlider, FloatSlider, Dropdown, Button, HBox, VBox
+import ipywidgets as widgets
+
 # ***********************************************************************
 # Mis en commentaire car Bug ChM le 29/08/2024
 
@@ -170,39 +177,29 @@ elif page == pages[2]:
     st.header("📊 Statistiques")
 
 
-    # # Test de normalité de Shapiro-Wilk
-    # stat, p = shapiro(salaire['salaire_cadre_femme'])
-    # st.write(f"**Statistiques :** {stat:.3f}")
-    # st.write(f"**p-value :** {p:.5f}")
+   # Test de normalité de Shapiro-Wilk
+    stat, p = shapiro(salaire['salaire_cadre_femme'])
+    st.write('Test de normalité de Shapiro-Wilk pour la variable salaire_cadre_femme')
+    st.write(f"**Statistiques :** {stat:.3f}")
+    st.write(f"**p-value :** {p:.5f}")
+    st.write('La statistique est proche de 1 mais la valeur de la p-value est égale à 0 ce qui suggère que les données de la variable salaire_cadre_femme ne suivent pas une loi normale')
 
-    # alpha = 0.05
-    # if p > alpha:
-    #     st.write("Les données semblent suivre une distribution normale.")
-    #     st.write(f"Les données suivent probablement une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
-    # else:
-    #     st.write("Les données ne suivent probablement pas une distribution normale.")
-    #     st.write(f"Les données ne suivent probablement pas une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
-# Matrice de corrélation des variables du dataframe salaire
-    st.write("### Matrice de corrélation des variables du dataframe salaire")
-    
-    # # Exclure les colonnes non numériques
-    # salaire_corr = salaire.drop(columns=['CODGEO','LIBGEO'])  # il n'y a pas de colonne 'LIBGEO'
-    
-    # # Créer la matrice de corrélation avec Plotly
-    # matrix_corr = px.imshow(salaire_corr.corr().round(2), text_auto=True)
-    
-    # # Mettre en forme les annotations et les axes
-    # matrix_corr.update_traces(hoverongaps=False)
-    # matrix_corr.update_layout(
-    #     title='Matrice de corrélation des salaires',
-    #     xaxis=dict(title='Variables'),
-    #     yaxis=dict(title='Variables'),
-    #     width=1000,
-    #     height=800
-    # )
-    
-    # Afficher la matrice de corrélation dans Streamlit
-    # st.plotly_chart(matrix_corr)
+# Suppression des colonnes non nécessaires
+    salaire_corr = salaire.drop(columns=['CODGEO', 'LIBGEO'])
+
+# Création de la matrice de corrélation avec Plotly
+    matrix_corr = px.imshow(salaire_corr.corr().round(2), text_auto=True)
+
+# Mise en forme des annotations avec deux chiffres après la virgule
+    matrix_corr.update_traces(hoverongaps=False)
+    matrix_corr.update_layout(title='Matrice de corrélation des salaires',
+                          xaxis=dict(title='Variables'),
+                          yaxis=dict(title='Variables'),
+                          width=1000,
+                          height=800)
+
+# Affichage du graphique avec Streamlit
+    st.plotly_chart(matrix_corr)
 
 
 # Page de Data Visualisation
