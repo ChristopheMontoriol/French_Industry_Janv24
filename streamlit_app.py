@@ -10,7 +10,7 @@ import warnings
 
 # import pickle
 # import json
-import sklearn
+# import sklearn
 # ***********************************************************************
 
 # Pour éviter les messages d'avertissement
