@@ -461,10 +461,10 @@ elif page == pages[5]:
 # Page de Conclusion
 elif page == pages[6]:
     st.header("📌 Conclusion")
-    st.write("""ce projet a été une formidable opportunité de mettre en pratique l'ensemble des compétences acquises durant notre formation. 
+    st.write("""Ce projet a été une formidable opportunité de mettre en pratique l'ensemble des compétences acquises durant notre formation. 
     Il nous a permis de développer une approche rigoureuse et méthodique de l'analyse de données, 
     de perfectionner nos compétences techniques, 
     et d'améliorer nos capacités à transformer des données brutes en informations exploitables et pertinentes.""")
-    st.write("Nous souhaiterions remercier Notre mentor Tarik Anouar, pour nous avoir aidé sur ce projet.")   
+    st.write("Nous souhaitons remercier chaleureusement notre mentor, Tarik Anouar, pour nous avoir aidé sur ce projet.")   
 
 
