@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import io
 import warnings
+import plotly.express as px
 # ***********************************************************************
 # Mis en commentaire car Bug ChM le 29/08/2024
 
