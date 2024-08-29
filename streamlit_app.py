@@ -153,13 +153,13 @@ elif page == pages[1]:
         st.write(dataframe.describe())
 
     # Affichage des informations en fonction de la page sélectionnée
-    if st.button == "Etablissement":
+    if st.session_state.button == "Etablissement":
         afficher_info(etablissement, "Etablissement")
-    elif st.button== "Geographic":
+    elif st.session_state.page== "Geographic":
         afficher_info(geographic, "Geographic")
-    elif st.button == "Salaire":
+    elif st.session_state.page == "Salaire":
         afficher_info(salaire, "Salaire")
-    elif st.button == "Population":
+    elif st.session_state.page == "Population":
         # Afficher un message pour la page Population
         st.write("Pas d'import du dataframe Population, ce jeu de données n'est pas utilisé dans notre projet.")
         # Ajouter un lien vers l'image population.jpg
