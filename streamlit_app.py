@@ -179,7 +179,7 @@ elif page == pages[2]:
    # Test de normalité de Shapiro-Wilk
     stat, p = shapiro(salaire['salaire_cadre_femme'])
     st.write('Test de normalité de Shapiro-Wilk pour la variable salaire_cadre_femme')
-    st.write(f"**Statistiques :** {stat:.3f}")
+    st.write(f"**Statistique :** {stat:.3f}")
     st.write(f"**p-value :** {p:.5f}")
     st.write('La statistique est proche de 1 mais la valeur de la p-value est égale à 0 ce qui suggère que les données de la variable salaire_cadre_femme ne suivent pas une loi normale')
 
