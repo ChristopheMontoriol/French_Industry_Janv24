@@ -13,12 +13,6 @@ from scipy.stats import shapiro
 import pickle
 import json
 
-# ***********************************************************************
-# Mis en commentaire car Bug ChM le 29/08/2024
-
-
-# import sklearn
-# ***********************************************************************
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
@@ -159,13 +153,13 @@ elif page == pages[1]:
         st.write(dataframe.describe())
 
     # Affichage des informations en fonction de la page sélectionnée
-    if st.session_state.page == "Etablissement":
+    if st.button == "Etablissement":
         afficher_info(etablissement, "Etablissement")
-    elif st.session_state.page == "Geographic":
+    elif st.button== "Geographic":
         afficher_info(geographic, "Geographic")
-    elif st.session_state.page == "Salaire":
+    elif st.button == "Salaire":
         afficher_info(salaire, "Salaire")
-    elif st.session_state.page == "Population":
+    elif st.button == "Population":
         # Afficher un message pour la page Population
         st.write("Pas d'import du dataframe Population, ce jeu de données n'est pas utilisé dans notre projet.")
         # Ajouter un lien vers l'image population.jpg
