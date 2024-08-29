@@ -153,7 +153,7 @@ elif page == pages[1]:
         st.write(dataframe.describe())
 
     # Affichage des informations en fonction de la page sélectionnée
-    if st.session_state.button == "Etablissement":
+    if st.session_state.page == "Etablissement":
         afficher_info(etablissement, "Etablissement")
     elif st.session_state.page== "Geographic":
         afficher_info(geographic, "Geographic")
