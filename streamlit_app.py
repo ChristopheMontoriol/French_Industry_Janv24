@@ -169,18 +169,18 @@ elif page == pages[2]:
     st.header("📊 Statistiques")
 
 
-    # Test de normalité de Shapiro-Wilk
-    stat, p = shapiro(salaire['salaire_cadre_femme'])
-    st.write(f"**Statistiques :** {stat:.3f}")
-    st.write(f"**p-value :** {p:.5f}")
+    # # Test de normalité de Shapiro-Wilk
+    # stat, p = shapiro(salaire['salaire_cadre_femme'])
+    # st.write(f"**Statistiques :** {stat:.3f}")
+    # st.write(f"**p-value :** {p:.5f}")
 
-    alpha = 0.05
-    if p > alpha:
-        st.write("Les données semblent suivre une distribution normale.")
-        st.write(f"Les données suivent probablement une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
-    else:
-        st.write("Les données ne suivent probablement pas une distribution normale.")
-        st.write(f"Les données ne suivent probablement pas une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
+    # alpha = 0.05
+    # if p > alpha:
+    #     st.write("Les données semblent suivre une distribution normale.")
+    #     st.write(f"Les données suivent probablement une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
+    # else:
+    #     st.write("Les données ne suivent probablement pas une distribution normale.")
+    #     st.write(f"Les données ne suivent probablement pas une distribution normale avec un Statistique={stat:.3f} et une p-value={p:.5f}.")
 # Matrice de corrélation des variables du dataframe salaire
     st.write("### Matrice de corrélation des variables du dataframe salaire")
     
