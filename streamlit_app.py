@@ -187,8 +187,8 @@ elif page == pages[2]:
     # Exclure les colonnes non numériques
     salaire_corr = salaire.drop(columns=['CODGEO'])  # il n'y a pas de colonne 'LIBGEO'
     
-    # # Créer la matrice de corrélation avec Plotly
-    # matrix_corr = px.imshow(salaire_corr.corr().round(2), text_auto=True)
+    # Créer la matrice de corrélation avec Plotly
+    matrix_corr = px.imshow(salaire_corr.corr().round(2), text_auto=True)
     
     # # Mettre en forme les annotations et les axes
     # matrix_corr.update_traces(hoverongaps=False)
