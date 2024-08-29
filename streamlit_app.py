@@ -10,8 +10,8 @@ import plotly.express as px
 import pylab
 import scipy.stats as stats
 from scipy.stats import shapiro
-from ipywidgets import interact, IntSlider, FloatSlider, Dropdown, Button, HBox, VBox
-import ipywidgets as widgets
+# from ipywidgets import interact, IntSlider, FloatSlider, Dropdown, Button, HBox, VBox
+# import ipywidgets as widgets
 
 # ***********************************************************************
 # Mis en commentaire car Bug ChM le 29/08/2024
