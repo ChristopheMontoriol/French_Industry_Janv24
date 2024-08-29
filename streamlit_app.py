@@ -187,22 +187,23 @@ elif page == pages[2]:
     
     # Exclure les colonnes non numériques
     salaire_corr = salaire.drop(columns=['CODGEO'])  # il n'y a pas de colonne 'LIBGEO'
+    salaire_corr = salaire.drop(columns=['LIBGEO']) 
     
     # Créer la matrice de corrélation avec Plotly
     matrix_corr = px.imshow(salaire_corr.corr().round(2), text_auto=True)
     
-    # # Mettre en forme les annotations et les axes
-    # matrix_corr.update_traces(hoverongaps=False)
-    # matrix_corr.update_layout(
-    #     title='Matrice de corrélation des salaires',
-    #     xaxis=dict(title='Variables'),
-    #     yaxis=dict(title='Variables'),
-    #     width=1000,
-    #     height=800
-    # )
+    # Mettre en forme les annotations et les axes
+    matrix_corr.update_traces(hoverongaps=False)
+    matrix_corr.update_layout(
+        title='Matrice de corrélation des salaires',
+        xaxis=dict(title='Variables'),
+        yaxis=dict(title='Variables'),
+        width=1000,
+        height=800
+    )
     
-    # Afficher la matrice de corrélation dans Streamlit
-    # st.plotly_chart(matrix_corr)
+    Afficher la matrice de corrélation dans Streamlit
+    st.plotly_chart(matrix_corr)
 
 
 # Page de Data Visualisation
