@@ -201,7 +201,7 @@ elif page == pages[2]:
     # )
     
     # Afficher la matrice de corrélation dans Streamlit
-    st.plotly_chart(matrix_corr)
+    # st.plotly_chart(matrix_corr)
 
 
 # Page de Data Visualisation
