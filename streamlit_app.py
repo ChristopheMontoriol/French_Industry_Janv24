@@ -10,13 +10,13 @@ import plotly.express as px
 import pylab
 import scipy.stats as stats
 from scipy.stats import shapiro
-
+import pickle
+import json
 
 # ***********************************************************************
 # Mis en commentaire car Bug ChM le 29/08/2024
 
-# import pickle
-# import json
+
 # import sklearn
 # ***********************************************************************
 
