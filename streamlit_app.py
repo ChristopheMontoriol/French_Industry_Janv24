@@ -453,7 +453,7 @@ elif page == pages[5]:
     st.markdown(
         "{prediction_encoded}", 
         unsafe_allow_html=True
-    
+    )
 
 
 # Page de Conclusion
