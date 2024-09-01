@@ -6,4 +6,4 @@ numpy
 scipy
 plotly
 seaborn
-sklearn
+scikit-learn
