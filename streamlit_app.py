@@ -13,7 +13,7 @@ from scipy.stats import shapiro
 import pickle
 import json
 
-import sklearn
+
 
 
 # Pour éviter les messages d'avertissement
