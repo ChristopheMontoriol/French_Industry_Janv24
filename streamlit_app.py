@@ -415,7 +415,24 @@ elif page == pages[5]:
             step = 1.0,
         )
         caracteristiques_entree.append(caracteristique)
+
+      data_pred = {
+            'Variables': ['salaire_cadre_discretise','salaire_employe_discretise','salaire_homme_discretise','salaire_+50_discretise','salaire_+50_femme_discretise','salaire'],
+            'Prédiction N°1': [1,0,0,0,0,13.7],
+            'Prédiction N°2': [1,1,1,1,1,18.0]
+        }
     
+    st.write("")
+    
+    if st.checkbox("Cas concret de prédiction"):
+            #st.write("##### Cas concret de prédiction :")
+            tab = pd.DataFrame.from_dict(data_pred, orient='index')
+            # Définir les colonnes en utilisant la première ligne du DataFrame
+            tab.columns = tab.iloc[0]
+            # Exclure la première ligne du DataFrame
+            tab = tab[1:]    
+            st.table(tab)
+        
     # Charger le modèle et le mapping de la cible
     modele = charger_modele()
     target_mapping = charger_target_mapping()
@@ -435,22 +452,7 @@ elif page == pages[5]:
         unsafe_allow_html=True
     )
     
-    data_pred = {
-            'Variables': ['salaire_cadre_discretise','salaire_employe_discretise','salaire_homme_discretise','salaire_+50_discretise','salaire_+50_femme_discretise','salaire'],
-            'Prédiction N°1': [1,0,0,0,0,13.7],
-            'Prédiction N°2': [1,1,1,1,1,18.0]
-        }
-    
-    st.write("")
-    
-    if st.checkbox("Cas concret de prédiction"):
-            #st.write("##### Cas concret de prédiction :")
-            tab = pd.DataFrame.from_dict(data_pred, orient='index')
-            # Définir les colonnes en utilisant la première ligne du DataFrame
-            tab.columns = tab.iloc[0]
-            # Exclure la première ligne du DataFrame
-            tab = tab[1:]    
-            st.table(tab)
+  
 
 # Page de Conclusion
 elif page == pages[6]:
