@@ -293,7 +293,7 @@ elif page == pages[4]:
     st.subheader("Objectif")
     st.write("Prédire le salaire net moyen en fonction des features.")
     
-    if st.button("Modèles étudiés") :
+    if st.expander("Modèles étudiés") :
         st.subheader("Liste des modèles")
         st.markdown("""
                     Afin de déterminer le plus performant possible, nous avons étudié plusieurs modèles de machine learning:
