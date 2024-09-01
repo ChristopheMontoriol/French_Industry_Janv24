@@ -392,7 +392,7 @@ elif page == pages[5]:
     
         # Afficher le tableau avec le style appliqué
         st.subheader("Tableau des intervalles")
-        st.table(styled_tab)    
+        st.table(tab1)    
 
 
     
