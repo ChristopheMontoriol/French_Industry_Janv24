@@ -12,7 +12,7 @@ import scipy.stats as stats
 from scipy.stats import shapiro
 import pickle
 import json
-import sklearn
+pip install scikit-learn==<1.3.2>
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
