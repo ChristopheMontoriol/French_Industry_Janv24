@@ -314,7 +314,7 @@ elif page == pages[4]:
                     6. Optimisation du modèle : variation des paramètres, sélection des features utilisées, discrétisation des valeurs.
                     7. Visualisation et analyse des résultats.
                 """)
-    if st.button("Modèle retenu") :
+     with st.expander("Modèle retenu") :
         data = {
         'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
         'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
@@ -350,7 +350,7 @@ elif page == pages[4]:
         st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
 
 
-    if st.button("Evaluation graphique du modèle") :
+     with st.expander("Evaluation graphique du modèle") :
  
         st.subheader("Dispersion des résidus & distributions des résidus")
         image_distrib = "https://zupimages.net/up/24/35/r6ed.png"
@@ -370,7 +370,7 @@ elif page == pages[4]:
                     """)
         
 
-    if st.button("Features d'importance") :
+     with st.expander("Features d'importance") :
 
         st.subheader("Histogramme des Features d'importance")
         image_features_importances = "https://zupimages.net/up/24/35/asi7.png"
