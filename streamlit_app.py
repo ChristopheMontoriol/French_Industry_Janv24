@@ -416,7 +416,7 @@ elif page == pages[5]:
         )
         caracteristiques_entree.append(caracteristique)
 
-          data_pred = {
+    data_pred = {
             'Variables': ['salaire_cadre_discretise','salaire_employe_discretise','salaire_homme_discretise','salaire_+50_discretise','salaire_+50_femme_discretise','salaire'],
             'Prédiction N°1': [1,0,0,0,0,13.7],
             'Prédiction N°2': [1,1,1,1,1,18.0]  }
