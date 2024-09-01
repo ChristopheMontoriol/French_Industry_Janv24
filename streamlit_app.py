@@ -12,7 +12,7 @@ import scipy.stats as stats
 from scipy.stats import shapiro
 import pickle
 import json
-pip install scikit-learn
+pip3 install scikit-learn
 
 
 # Pour éviter les messages d'avertissement
