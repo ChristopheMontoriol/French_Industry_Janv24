@@ -338,7 +338,7 @@ elif page == pages[4]:
         # Afficher le tableau avec le style appliqué
         st.subheader("Synthèse des métriques de performance")
         st.table(styled_tab)
-        st.markdown("""
+        st.write("""
                         ##### Choix du modèle :
                             - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation.                     
                             Ils sont donc disqualifiés.
