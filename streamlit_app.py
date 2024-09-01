@@ -436,7 +436,7 @@ elif page == pages[5]:
     with st.expander("Correspondance des intervalles") :
         data_inter = {
         'Intervalles': ['0', '1',  '2','3','4'],
-        'salaire_cadre_discretise': ["(15.964, 23.1]","(23.1, 30.2]","(30.2, 37.3]","(37.3, 44.4]","(44.4, 51.5]"],
+        'salaire_cadre_discretise': ['(15.964, 23.1]','(23.1, 30.2]','(30.2, 37.3]','(37.3, 44.4]','(44.4, 51.5]'],
         'salaire_employe_discretise': [0.9977,0.8892,0.9376,0.9140,0.9996],
         'salaire_homme_discretise': [0.0117, 0.5903,0.3755,0.4577,0.0022],
         'salaire_+50_discretise': [0.0747,0.5250,0.4523,0.5240,0.0377],
