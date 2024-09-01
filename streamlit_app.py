@@ -12,7 +12,8 @@ import scipy.stats as stats
 from scipy.stats import shapiro
 import pickle
 import json
-import sklearn
+import os
+os.system('pip install --upgrade --force-reinstall -U scikit-learn numpy scipy')
 
 
 # Pour éviter les messages d'avertissement
