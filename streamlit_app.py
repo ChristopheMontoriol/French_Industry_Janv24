@@ -432,7 +432,8 @@ elif page == pages[5]:
             # Exclure la première ligne du DataFrame
             tab = tab[1:]    
             st.table(tab)
-        
+
+    
     # Charger le modèle et le mapping de la cible
     modele = charger_modele()
     target_mapping = charger_target_mapping()
@@ -452,7 +453,8 @@ elif page == pages[5]:
         unsafe_allow_html=True
     )
     
-  
+
+print(sklearn.__version__)
 
 # Page de Conclusion
 elif page == pages[6]:
