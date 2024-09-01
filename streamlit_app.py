@@ -13,7 +13,8 @@ from scipy.stats import shapiro
 import pickle
 import json
 
-
+import sklearn
+st.write("Version de scikit-learn :", sklearn.__version__)
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
@@ -120,8 +121,7 @@ if page == pages[0]:
         
         Enfin, un modèle de Machine Learning sera entrainé pour prédire au mieux le salaire net moyen en fonction des variables disponibles dans les jeux de données.
     """)
-    import sklearn
-    pip show sklearn
+
 
 
 
