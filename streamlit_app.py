@@ -12,7 +12,7 @@ import scipy.stats as stats
 from scipy.stats import shapiro
 import pickle
 import json
-
+import sklearn
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
@@ -119,7 +119,7 @@ if page == pages[0]:
         
         Enfin, un modèle de Machine Learning sera entrainé pour prédire au mieux le salaire net moyen en fonction des variables disponibles dans les jeux de données.
     """)
-
+        st.write("Version de scikit-learn :", sklearn.__version__)
 
 # Page d'exploration des données
 elif page == pages[1]:
@@ -434,7 +434,7 @@ elif page == pages[5]:
             st.table(tab)
 
     
-    st.write("Version de scikit-learn :", sklearn.__version__)
+
 
 
     # Charger le modèle et le mapping de la cible
