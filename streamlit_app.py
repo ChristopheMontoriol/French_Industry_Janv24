@@ -12,7 +12,7 @@ import scipy.stats as stats
 from scipy.stats import shapiro
 import pickle
 import json
-import sklearn
+import scikit-learn as sklearn
 
 
 
