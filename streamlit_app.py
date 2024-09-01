@@ -432,6 +432,7 @@ elif page == pages[5]:
             # Exclure la première ligne du DataFrame
             tab = tab[1:]    
             st.table(tab)
+        
     with st.expander("Correspondance des intervalles") :
         data_inter = {
         'Intervalles': ['0', '1',  '2','3','4'],
@@ -448,7 +449,7 @@ elif page == pages[5]:
     
         # Afficher le tableau avec le style appliqué
         st.subheader("Tableau des intervalles")
-        st.table(styled_tab)
+        st.table(styled_tab1)
         
     # Charger le modèle et le mapping de la cible
     modele = charger_modele()
