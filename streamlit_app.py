@@ -355,7 +355,7 @@ elif page == pages[4]:
          st.subheader("Dispersion des résidus & distributions des résidus")
          image_distrib = "https://zupimages.net/up/24/35/r6ed.png"
          st.image(image_distrib, use_column_width=True)
-         st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
+            st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
             image_comparaison = "https://zupimages.net/up/24/35/t9c6.png"
             st.image(image_comparaison, use_column_width=True)
             
