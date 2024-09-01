@@ -294,8 +294,8 @@ elif page == pages[4]:
     st.write("Prédire le salaire net moyen en fonction des features.")
     
     if st.expander("Modèles étudiés") :
-        st.subheader("Liste des modèles")
-        st.markdown("""
+        st.write("Liste des modèles")
+        st.write("""
                     Afin de déterminer le plus performant possible, nous avons étudié plusieurs modèles de machine learning:
                     - Régression linéaire
                     - Forêt aléatoire
@@ -303,8 +303,8 @@ elif page == pages[4]:
         """)
 
 
-        st.subheader("Exécution des modèles")
-        st.markdown("""
+        st.write("Exécution des modèles")
+        st.write("""
                     Pour chaque modèle appliqué, nous avons suivi les étapes suivantes :
                     1. Instanciation du modèle.
                     2. Entrainement du modèle sur l'ensemble du jeu d'entraînement X_train et y_train.
