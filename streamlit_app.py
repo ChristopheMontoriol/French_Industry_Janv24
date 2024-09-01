@@ -315,7 +315,7 @@ elif page == pages[4]:
                     7. Visualisation et analyse des résultats.
                 """)
      with st.expander("Modèle retenu") :
-        data = {
+         data = {
         'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
         'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
         'R² test': [0.9977,0.8892,0.9376,0.9140,0.9996,0.9938],
