@@ -385,9 +385,9 @@ elif page == pages[5]:
         'salaire_+50_discretise': ['(10.454, 19.78]','(19.78, 29.06]','(29.06, 38.34]','(38.34, 47.62]','(47.62, 56.9]'],
         'salaire_+50_femme_discretise': ['(9.478, 13.8]','(13.8, 18.1]', '(18.1, 22.4]','(22.4, 26.7]','(26.7, 31.0]']
         }
-        data_inter = data_inter.set_index("Intervalles")
+        data_inter1 = data_inter.set_index("Intervalles")
         # Création du DataFrame
-        tab1 = pd.DataFrame(data_inter)
+        tab1 = pd.DataFrame(data_inter1)
         tab1.index = tab1.index #+ 1
     
         # Afficher le tableau avec le style appliqué
