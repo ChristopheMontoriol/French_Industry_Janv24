@@ -348,9 +348,10 @@ elif page == pages[4]:
                             """)
     
             st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
-    
-    
-     with st.expander("Evaluation graphique du modèle") :
+
+
+
+        with st.expander("Evaluation graphique du modèle") :
          st.subheader("Dispersion des résidus & distributions des résidus")
          image_distrib = "https://zupimages.net/up/24/35/r6ed.png"
          st.image(image_distrib, use_column_width=True)
@@ -367,7 +368,7 @@ elif page == pages[4]:
                     """)
         
 
-     with st.expander("Features d'importance") :
+        with st.expander("Features d'importance") :
          st.subheader("Histogramme des Features d'importance")
             image_features_importances = "https://zupimages.net/up/24/35/asi7.png"
             st.image(image_features_importances, use_column_width=True)
