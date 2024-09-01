@@ -315,31 +315,31 @@ elif page == pages[4]:
                     7. Visualisation et analyse des résultats.
                 """)
     with st.expander("Modèle retenu") :
-            data = {
-            'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
-            'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
-            'R² test': [0.9977,0.8892,0.9376,0.9140,0.9996,0.9938],
-            'MSE test': [0.0117, 0.5903,0.3755,0.4577,0.0022,0.0344],
-            'MAE test': [0.0747,0.5250,0.4523,0.5240,0.0377,0.1319],
-            'RMSE test': [0.1084,0.7683, 0.6127,0.6765,0.0474,0.1855]
-                }
+        data = {
+        'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
+        'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
+        'R² test': [0.9977,0.8892,0.9376,0.9140,0.9996,0.9938],
+        'MSE test': [0.0117, 0.5903,0.3755,0.4577,0.0022,0.0344],
+        'MAE test': [0.0747,0.5250,0.4523,0.5240,0.0377,0.1319],
+        'RMSE test': [0.1084,0.7683, 0.6127,0.6765,0.0474,0.1855]
+            }
     
             
-             # Création du DataFrame
-            tab = pd.DataFrame(data)
-            tab.index = tab.index #+ 1
-            # Trouver l'index de la ligne correspondant à "Forêt aléatoire avec discrétisation"
-            rf_index = tab[tab['Modèles'] == 'Forêt aléatoire avec discrétisation'].index
+        # Création du DataFrame
+        tab = pd.DataFrame(data)
+        tab.index = tab.index #+ 1
+        # Trouver l'index de la ligne correspondant à "Forêt aléatoire avec discrétisation"
+        rf_index = tab[tab['Modèles'] == 'Forêt aléatoire avec discrétisation'].index
     
-            # Appliquer un style personnalisé à la ligne spécifique
-            styled_tab = tab.style.apply(lambda x: ['background: #27dce0' if x.name in rf_index else '' for i in x], axis=1)
+        # Appliquer un style personnalisé à la ligne spécifique
+        styled_tab = tab.style.apply(lambda x: ['background: #27dce0' if x.name in rf_index else '' for i in x], axis=1)
     
     
-             # Afficher le tableau avec le style appliqué
-            st.subheader("Synthèse des métriques de performance")
-            st.table(styled_tab)
-            st.markdown("""
-                            ##### Choix du modèle :
+        # Afficher le tableau avec le style appliqué
+        st.subheader("Synthèse des métriques de performance")
+        st.table(styled_tab)
+        st.markdown("""
+                        ##### Choix du modèle :
                             - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation.                     
                             Ils sont donc disqualifiés.
                             - Critères de choix pour le modèle Forêt aléatoire :                    
@@ -347,18 +347,18 @@ elif page == pages[4]:
                             Les erreurs restent acceptables.
                             """)
     
-            st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
+        st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
 
 
     with st.expander("Evaluation graphique du modèle") :
-                st.subheader("Dispersion des résidus & distributions des résidus")
-                image_distrib = "https://zupimages.net/up/24/35/r6ed.png"
-                st.image(image_distrib, use_column_width=True)
-                st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
-                image_comparaison = "https://zupimages.net/up/24/35/t9c6.png"
-                st.image(image_comparaison, use_column_width=True)
+        st.subheader("Dispersion des résidus & distributions des résidus")
+        image_distrib = "https://zupimages.net/up/24/35/r6ed.png"
+        st.image(image_distrib, use_column_width=True)
+        st.subheader("Comparaison des predictions VS réelles & QQ plot des résidus")
+        image_comparaison = "https://zupimages.net/up/24/35/t9c6.png"
+        st.image(image_comparaison, use_column_width=True)
             
-                st.markdown("""
+        st.markdown("""
                     ##### Conclusions :         
                     - Distributions relativement centrées autour de zéro
                     - Distribution normale des résidus
@@ -367,9 +367,9 @@ elif page == pages[4]:
                     """)
     
     with st.expander("Features d'importance") :
-                    st.subheader("Histogramme des Features d'importance")
-                    image_features_importances = "https://zupimages.net/up/24/35/asi7.png"
-                    st.image(image_features_importances, use_column_width=True)
+        st.subheader("Histogramme des Features d'importance")
+        image_features_importances = "https://zupimages.net/up/24/35/asi7.png"
+        st.image(image_features_importances, use_column_width=True)
 
 
 # Page de Prédiction
