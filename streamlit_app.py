@@ -14,11 +14,6 @@ import pickle
 import json
 import os
 
-import os
-os.system('pip uninstall -y scikit-learn')
-os.system('pip install scikit-learn==1.3.2')
-
-import sklearn
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
