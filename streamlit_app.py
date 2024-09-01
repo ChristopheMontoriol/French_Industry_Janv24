@@ -436,9 +436,6 @@ elif page == pages[5]:
             tab = tab[1:]    
             st.table(tab)
 
-    
-
-
 
     # Charger le modèle et le mapping de la cible
     modele = charger_modele()
@@ -455,7 +452,7 @@ elif page == pages[5]:
     
     # Afficher la prédiction
     st.markdown(
-        f"<p style='font-size:24px; font-weight:bold;'>La prédiction du salaire moyen est : {prediction_encoded}</p>", 
+        "{prediction_encoded}", 
         unsafe_allow_html=True
     )
     
