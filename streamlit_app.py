@@ -436,8 +436,6 @@ elif page == pages[5]:
             tab = tab[1:]    
             st.table(tab)
 
-
-    )
     
 
 
