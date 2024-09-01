@@ -388,11 +388,11 @@ elif page == pages[5]:
             }
 
         # Création du DataFrame
-        tab = pd.DataFrame(data_inter)
-        tab.index = tab.index #+ 1
+        tab1 = pd.DataFrame(data_inter)
+        tab1.index = tab.index #+ 1
     
         # Afficher le tableau avec le style appliqué
-        st.subheader("Synthèse des métriques de performance")
+        st.subheader("Tableau des intervalles")
         st.table(styled_tab)
 
     
