@@ -338,13 +338,14 @@ elif page == pages[4]:
         # Afficher le tableau avec le style appliqué
         st.subheader("Synthèse des métriques de performance")
         st.table(styled_tab)
-        st.write("""Choix du modèle :
-                            - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation.                     
-                            Ils sont donc disqualifiés.
-                            - Critères de choix pour le modèle Forêt aléatoire :                    
-                            Les R² ne montrent pas d'overfitting et sont proches de 0.9.                                
-                            Les erreurs restent acceptables.
-                            """)
+        st.markdown("""
+                    ##### Choix du modèle :
+                    - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation.                     
+                    Ils sont donc disqualifiés.
+                    - Critères de choix pour le modèle Forêt aléatoire :                    
+                    - Les R² ne montrent pas d'overfitting et sont proches de 0.9.                                
+                    - Les erreurs restent acceptables.
+                    """)
     
         st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
 
