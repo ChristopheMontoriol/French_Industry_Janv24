@@ -120,8 +120,9 @@ if page == pages[0]:
         
         Enfin, un modèle de Machine Learning sera entrainé pour prédire au mieux le salaire net moyen en fonction des variables disponibles dans les jeux de données.
     """)
-    
+    import sklearn
     st.write("Version de scikit-learn :", sklearn.__version__)
+
 
 # Page d'exploration des données
 elif page == pages[1]:
