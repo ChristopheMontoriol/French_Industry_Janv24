@@ -434,7 +434,7 @@ elif page == pages[5]:
             st.table(tab)
 
     
-st.write("Version de scikit-learn :", sklearn.__version__)
+    st.write("Version de scikit-learn :", sklearn.__version__)
 
 
     # Charger le modèle et le mapping de la cible
