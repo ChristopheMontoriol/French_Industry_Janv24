@@ -376,7 +376,8 @@ elif page == pages[4]:
 elif page == pages[5]:
     st.header("🔮 Prédiction")
     st.subheader('Prédiction du salaire net moyen')
-    with st.expander("Evaluation graphique du modèle") :
+    
+    with st.expander("Correspondance des intervalles") :
         data_inter = {
         'Intervalles': ['0', '1',  '2','3','4'],
         'salaire_cadre_discretise': ["(15.964, 23.1]","(23.1, 30.2]","(30.2, 37.3]","(37.3, 44.4]","(44.4, 51.5]"],
