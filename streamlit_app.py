@@ -436,6 +436,23 @@ elif page == pages[5]:
             tab = tab[1:]    
             st.table(tab)
 
+    # Charger le modèle et le mapping de la cible
+    modele = charger_modele()
+    target_mapping = charger_target_mapping()
+    
+    # Préparer les caractéristiques pour la prédiction
+    caracteristiques = np.array([caracteristiques_entree])
+    
+    # Prévoir la classe avec le modèle
+    prediction_encoded = modele.predict(caracteristiques)
+    
+    # Décoder la prédiction
+    prediction_decoded = target_mapping[prediction_encoded[0]]
+    
+    # Afficher la prédiction
+    st.markdown(
+        "{prediction_encoded}", 
+        unsafe_allow_html=True
     
 
 
