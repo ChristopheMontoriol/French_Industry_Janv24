@@ -388,7 +388,7 @@ elif page == pages[5]:
 
         # Création du DataFrame
         tab1 = pd.DataFrame(data_inter)
-        tab1.index = tab.index #+ 1
+        tab1.index = tab1.index #+ 1
     
         # Afficher le tableau avec le style appliqué
         st.subheader("Tableau des intervalles")
