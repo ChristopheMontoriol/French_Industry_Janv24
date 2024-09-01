@@ -13,7 +13,7 @@ from scipy.stats import shapiro
 import pickle
 import json
 
-
+pytest -v getversion/tests/
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
