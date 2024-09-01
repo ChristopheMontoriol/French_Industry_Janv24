@@ -434,6 +434,9 @@ elif page == pages[5]:
             st.table(tab)
 
     
+st.write("Version de scikit-learn :", sklearn.__version__)
+
+
     # Charger le modèle et le mapping de la cible
     modele = charger_modele()
     target_mapping = charger_target_mapping()
@@ -454,7 +457,6 @@ elif page == pages[5]:
     )
     
 
- st.write(sklearn.__version__)
 
 # Page de Conclusion
 elif page == pages[6]:
