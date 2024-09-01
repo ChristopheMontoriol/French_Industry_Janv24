@@ -14,7 +14,7 @@ import pickle
 import json
 
 import sklearn
-st.write("Version de scikit-learn :", sklearn.__version__)
+
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
@@ -111,6 +111,7 @@ if page == pages[0]:
     st.caption("""**Groupe** : Christophe MONTORIOL, Issam YOUSR, Gwilherm DEVALLAN, Yacine OUDMINE""")
      # Ajouter l'image du bandeau
     st.image('https://raw.githubusercontent.com/ChristopheMontoriol/French_Industry_Janv24/main/data/Bandeau_FrenchIndustry.png', use_column_width=True)
+    st.write("Version de scikit-learn :", sklearn.__version__)
     st.write("""
         L’objectif premier de ce projet est d’étudier les inégalités salariales en France. 
         À travers plusieurs jeux de données et plusieurs variables (géographiques, socio-professionnelles, démographiques ...).       
