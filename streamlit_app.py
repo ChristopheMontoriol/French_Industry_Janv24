@@ -389,11 +389,11 @@ elif page == pages[5]:
 
         # Création du DataFrame
         tab1 = pd.DataFrame(data_inter,index=["A", "B", "C", "D", "E"])
-        df_reset = tab1.set_index("Intervalles")
+        #df_reset = tab1.set_index("Intervalles")
     
         # Afficher le tableau avec le style appliqué
         st.subheader("Tableau des intervalles")
-        st.table(df_reset)    
+        st.table(tab1)    
 
 
     
