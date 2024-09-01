@@ -14,13 +14,11 @@ import pickle
 import json
 import os
 
-# Installer la version spécifique de scikit-learn
-st.write("Installation de scikit-learn version 1.3.2...")
+import os
+os.system('pip uninstall -y scikit-learn')
 os.system('pip install scikit-learn==1.3.2')
 
-# Importer scikit-learn après l'installation
 import sklearn
-
 
 # Pour éviter les messages d'avertissement
 warnings.filterwarnings('ignore')
