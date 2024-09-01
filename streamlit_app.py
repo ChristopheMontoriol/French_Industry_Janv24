@@ -420,7 +420,7 @@ elif page == pages[5]:
             'Variables': ['salaire_cadre_discretise','salaire_employe_discretise','salaire_homme_discretise','salaire_+50_discretise','salaire_+50_femme_discretise','salaire'],
             'Prédiction N°1': [1,0,0,0,0,13.7],
             'Prédiction N°2': [1,1,1,1,1,18.0]
-        }
+            }
     
     st.write("")
     
