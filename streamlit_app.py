@@ -314,42 +314,42 @@ elif page == pages[4]:
                     6. Optimisation du modèle : variation des paramètres, sélection des features utilisées, discrétisation des valeurs.
                     7. Visualisation et analyse des résultats.
                 """)
-     with st.expander("Modèle retenu") :
-         data = {
-        'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
-        'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
-        'R² test': [0.9977,0.8892,0.9376,0.9140,0.9996,0.9938],
-        'MSE test': [0.0117, 0.5903,0.3755,0.4577,0.0022,0.0344],
-        'MAE test': [0.0747,0.5250,0.4523,0.5240,0.0377,0.1319],
-        'RMSE test': [0.1084,0.7683, 0.6127,0.6765,0.0474,0.1855]
-        }
-
-        
-        # Création du DataFrame
-        tab = pd.DataFrame(data)
-        tab.index = tab.index #+ 1
-        # Trouver l'index de la ligne correspondant à "Forêt aléatoire avec discrétisation"
-        rf_index = tab[tab['Modèles'] == 'Forêt aléatoire avec discrétisation'].index
-
-        # Appliquer un style personnalisé à la ligne spécifique
-        styled_tab = tab.style.apply(lambda x: ['background: #27dce0' if x.name in rf_index else '' for i in x], axis=1)
-
-
-        # Afficher le tableau avec le style appliqué
-        st.subheader("Synthèse des métriques de performance")
-        st.table(styled_tab)
-        st.markdown("""
-                        ##### Choix du modèle :
-                        - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation.                     
-                        Ils sont donc disqualifiés.
-                        - Critères de choix pour le modèle Forêt aléatoire :                    
-                        Les R² ne montrent pas d'overfitting et sont proches de 0.9.                                
-                        Les erreurs restent acceptables.
-                        """)
-
-        st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
-
-
+         with st.expander("Modèle retenu") :
+             data = {
+            'Modèles': ['Forêt aléatoire sans optimisation', 'Forêt aléatoire avec optimisation',  'Forêt aléatoire avec ratio H/F','Forêt aléatoire avec discrétisation','Régression linéaire 1','Régression linéaire 2'],
+            'R² train': [0.9994,0.9441,0.9491,0.9456,0.9993,0.9946],
+            'R² test': [0.9977,0.8892,0.9376,0.9140,0.9996,0.9938],
+            'MSE test': [0.0117, 0.5903,0.3755,0.4577,0.0022,0.0344],
+            'MAE test': [0.0747,0.5250,0.4523,0.5240,0.0377,0.1319],
+            'RMSE test': [0.1084,0.7683, 0.6127,0.6765,0.0474,0.1855]
+            }
+    
+            
+            # Création du DataFrame
+            tab = pd.DataFrame(data)
+            tab.index = tab.index #+ 1
+            # Trouver l'index de la ligne correspondant à "Forêt aléatoire avec discrétisation"
+            rf_index = tab[tab['Modèles'] == 'Forêt aléatoire avec discrétisation'].index
+    
+            # Appliquer un style personnalisé à la ligne spécifique
+            styled_tab = tab.style.apply(lambda x: ['background: #27dce0' if x.name in rf_index else '' for i in x], axis=1)
+    
+    
+            # Afficher le tableau avec le style appliqué
+            st.subheader("Synthèse des métriques de performance")
+            st.table(styled_tab)
+            st.markdown("""
+                            ##### Choix du modèle :
+                            - Les modèles de régression linaires 1 & 2 font de l'overfitting même après optimisation.                     
+                            Ils sont donc disqualifiés.
+                            - Critères de choix pour le modèle Forêt aléatoire :                    
+                            Les R² ne montrent pas d'overfitting et sont proches de 0.9.                                
+                            Les erreurs restent acceptables.
+                            """)
+    
+            st.write("#### Modèle retenue : Forêt aléatoire avec discrétisation.")
+    
+    
      with st.expander("Evaluation graphique du modèle") :
  
         st.subheader("Dispersion des résidus & distributions des résidus")
