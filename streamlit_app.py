@@ -454,7 +454,7 @@ elif page == pages[5]:
     )
     
 
- st.header(sklearn.__version__)
+ st.write(sklearn.__version__)
 
 # Page de Conclusion
 elif page == pages[6]:
